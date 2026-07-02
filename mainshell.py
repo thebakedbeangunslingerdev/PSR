@@ -9,12 +9,16 @@ from stripper import run_stripper
 from scribe import run_scribe
 from scribel import run_scribel
 from viewfile import run_view
+from discarder import run_discard
+
 
 def main_shell():
     print("===============================================================")
     print("Welcome to PSR! Written by McafeeHater!")
     print("Python Shells are Resurrected. Type 'exit' to close your session.")
     print("===============================================================\n")
+    
+    trash_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".TRASH.CAN")
     
     while True:
         try:
@@ -56,7 +60,10 @@ def main_shell():
                         print(f"Error: '{target_dir}' is a file, not a folder.")
                     except PermissionError:
                         print(f"Error: Access denied to '{target_dir}'.")
-                        
+
+            elif command == "discard":
+                run_discard(args, os.path.dirname(os.path.abspath(__file__)))
+
             elif command == "cleanse":
                 run_stripper()
 

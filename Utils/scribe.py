@@ -26,8 +26,16 @@ def run_scribe():
             return
 
     try:
-        with open(filename, "w", encoding="utf-8") as f:
+        # Resolve the static path to the central Vault directory
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        vault_folder = os.path.join(base_dir, "Vault")
+        os.makedirs(vault_folder, exist_ok=True)
+        
+        # Enforce the file save path into the Vault
+        vault_path = os.path.join(vault_folder, os.path.basename(filename))
+
+        with open(vault_path, "w", encoding="utf-8") as f:
             f.write("\n".join(lines))
-        print(f"File '{filename}' saved successfully.")
+        print(f"File saved successfully to Vault as '{os.path.basename(filename)}'.")
     except Exception as e:
-        print(f"Error saving file: {e}")
+        print(f"Error saving file to Vault: {e}")
