@@ -4,27 +4,27 @@ import sys
 utils_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Utils")
 if utils_path not in sys.path:
     sys.path.append(utils_path)
-
+#import the utils!
 from stripper import run_stripper
 from scribe import run_scribe
 from scribel import run_scribel
 from viewfile import run_view
 from discarder import run_discard
 
-
+#Main Shell Func
 def main_shell():
     print("===============================================================")
     print("Welcome to PSR! Written by McafeeHater!")
     print("Python Shells are Resurrected. Type 'exit' to close your session.")
     print("===============================================================\n")
-    
+    #Trash Folder
     trash_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".TRASH.CAN")
     
     while True:
         try:
             current_dir = os.getcwd()
             command_input = input(f"PSR // {current_dir} >>>>> ").strip()
-            
+            #Commands
             if not command_input:
                 continue
                 
@@ -87,10 +87,10 @@ def main_shell():
                 print("scribel  -> Launch a minimal GUI canvas drawing tool")
                 print("help     -> Show this menu")
                 print("exit     -> Close PSR\n")
-                
+                #Help Menu
             else:
                 print(f"PSR Error: '{command}' is not a recognized PSR function.")
-                
+                #Exit
         except (KeyboardInterrupt, EOFError):
             print("\nGoodbye! Hope you enjoyed your session!")
             sys.exit()
