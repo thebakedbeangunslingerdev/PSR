@@ -5,7 +5,7 @@ Once you start using PSR, you might be _clueless_ on how to use it. It **Is not 
 
 
 
-                                                    _PSR COMMAND MENU_
+                                                              PSR COMMAND MENU
 `locate`   -> View your current folder path
 
 
@@ -33,7 +33,6 @@ Once you start using PSR, you might be _clueless_ on how to use it. It **Is not 
 
 
 
-`scribel`  -> Launch a minimal GUI canvas drawing tool
 
 
 
@@ -50,8 +49,19 @@ Once you start using PSR, you might be _clueless_ on how to use it. It **Is not 
 
 
 
-PSR is still a work in progress.
-More Utils and programs will come in the `future`.
+
 
 
                 
+## Utilities & Programs
+
+
+
+
+`Stripper` - Strip specific characters from a file (Use the _cleanse_ command to launch this util)
+`Scribe`- A simple terminal text editor (Use the _scribe_ command to launch Scribe)
+`Scribel` - A simple GUI drawing app
+
+
+PSR is still a work in progress.
+More Utils and programs will come in the `future`.
