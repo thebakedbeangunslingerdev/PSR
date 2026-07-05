@@ -59,7 +59,14 @@ Once you start using PSR, you might be _clueless_ on how to use it. It **Is not 
 
 
 `Stripper` - Strip specific characters from a file (Use the _cleanse_ command to launch this util)
+
+
+
 `Scribe`- A simple terminal text editor (Use the _scribe_ command to launch Scribe)
+
+
+
+
 `Scribel` - A simple GUI drawing app
 
 
